@@ -10,8 +10,8 @@ body{
   opacity: 0;
   transition-property: opacity;
   /* MyCode  */
-  -webkit-animation: zoomin 10s linear;
-	animation: zoomin 10s linear;
+  -webkit-animation: zoomin 7s linear;
+	animation: zoomin 7s linear;
 	animation-fill-mode: forwards;
 }
 
@@ -100,19 +100,18 @@ body{
 }
 
 .caption-1 {
-  visibility: hidden;
-  /* MyCode  */
-  -webkit-animation: caption-1-animation 5s linear;
-	animation: caption-1-animation 5s linear;
-  animation-delay: 2ms;
-  animation-iteration-count: 2;
+  -webkit-animation: anim-1 18s linear;
+	animation: anim-1 18s linear;
 }
 .caption-2 {
-  /* MyCode  */
-  visibility: hidden;
-  -webkit-animation: caption-2-animation 5s linear;
-	animation: caption-2-animation 5s linear;
-  animation-delay: 10ms;
+  opacity: 0;
+  -webkit-animation: anim-2 18s linear;
+	animation: anim-2 18s linear;
+}
+.caption-3 {
+  opacity: 0;
+  -webkit-animation: anim-3 18s linear;
+	animation: anim-3 18s linear;
 }
 
 /* Caption */
@@ -134,23 +133,23 @@ body{
     } 
     .item:nth-child(1) {
       background: url('images/slider-11.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
 
     .item:nth-child(2) {
       background: url('images/slider-21.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
 
     .item:nth-child(3) {
       background: url('images/slider-31.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
 
 
@@ -171,25 +170,20 @@ body{
 /* 
  * Animation de l'affichage du caption
  */
-@-webkit-keyframes caption-1-animation {
-  0% {
-    visibility: visible
-  }
-  100% {
-    visibility: hidden;
-  }
-
+@keyframes anim-1 {
+	0%, 8.3% { opacity: 0; }
+  8.3%,25% { opacity: 1; }
+  33.33%, 100% { opacity: 0; }
 }
 
-@-webkit-keyframes caption-2-animation {
-  0% {
-    visibility: hidden;
-  }
-  20% {
-    visibility: visible;
-  }
-  100% {
-    visibility: visible;
-  }
+@keyframes anim-2 {
+	0%, 33.33% { opacity: 0; }
+  41.63%, 58.29% { opacity: 1; }
+  66.66%, 100% { opacity: 0; }
+}
 
+@keyframes anim-3 {
+	0%, 66.66% { opacity: 0; }
+  74.96%, 91.62% { opacity: 1; }
+  100% { opacity: 0; }
 }
