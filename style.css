@@ -1,0 +1,195 @@
+body{
+  font-family: 'Lato', sans-serif;
+}
+/* My EnyCode */
+.carousel-fade .carousel-inner {
+  overflow: hidden;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+  /* MyCode  */
+  -webkit-animation: zoomin 10s linear;
+	animation: zoomin 10s linear;
+	animation-fill-mode: forwards;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+} 
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+} 
+/* NEWS CAPTION */
+.carousel-caption-slide {
+  position: absolute;
+  right: 5%;
+  bottom: 20px;
+  left: 5%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: left;
+}
+.tx-red {
+  color: #e52421 !important;
+}
+.tx-60 {
+  font-size: 38px;
+}
+
+@media (max-width: 539px) { 
+  .tx-60 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 540px) { 
+  .tx-60 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 720px) { 
+  .tx-60 {
+    font-size: 38px;
+  }
+}
+
+/* Button */
+.slide-btn {
+  color: #ffffff;
+  background-color: #e52421;
+  border: none;
+  padding: 15px;
+}
+
+.caption-1 {
+  visibility: hidden;
+  /* MyCode  */
+  -webkit-animation: caption-1-animation 5s linear;
+	animation: caption-1-animation 5s linear;
+  animation-delay: 2ms;
+  animation-iteration-count: 2;
+}
+.caption-2 {
+  /* MyCode  */
+  visibility: hidden;
+  -webkit-animation: caption-2-animation 5s linear;
+	animation: caption-2-animation 5s linear;
+  animation-delay: 10ms;
+}
+
+/* Caption */
+/* .carousel-caption {
+  text-shadow: 0 1px 4px rgba(0,0,0,.9);
+  font-size:17px;
+}
+.carousel-caption h3 {
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+} */
+/* END CAPTION */
+    html,
+    body,
+    .carousel,
+    .carousel-inner,
+    .carousel-inner .item {
+      height: 80vh;
+    } 
+    .item:nth-child(1) {
+      background: url('images/slider-11.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+    }
+
+    .item:nth-child(2) {
+      background: url('images/slider-21.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+    }
+
+    .item:nth-child(3) {
+      background: url('images/slider-31.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+    }
+
+
+
+/* My EnyCode Animation */
+
+@-webkit-keyframes zoomin {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+
+}
+/* 
+ * Animation de l'affichage du caption
+ */
+@-webkit-keyframes caption-1-animation {
+  0% {
+    visibility: visible
+  }
+  100% {
+    visibility: hidden;
+  }
+
+}
+
+@-webkit-keyframes caption-2-animation {
+  0% {
+    visibility: hidden;
+  }
+  20% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+
+}
