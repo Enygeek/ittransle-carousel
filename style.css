@@ -100,18 +100,18 @@ body{
 }
 
 .caption-1 {
-  -webkit-animation: anim-1 18s linear;
-	animation: anim-1 18s linear;
+  -webkit-animation: anim-1 17s linear;
+	animation: anim-1 17s linear;
 }
 .caption-2 {
   opacity: 0;
-  -webkit-animation: anim-2 18s linear;
-	animation: anim-2 18s linear;
+  -webkit-animation: anim-2 17s linear;
+	animation: anim-2 17s linear;
 }
 .caption-3 {
   opacity: 0;
-  -webkit-animation: anim-3 18s linear;
-	animation: anim-3 18s linear;
+  -webkit-animation: anim-3 17s linear;
+	animation: anim-3 17s linear;
 }
 
 /* Caption */
